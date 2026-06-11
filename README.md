@@ -1,6 +1,6 @@
 # ⚽ FIFA World Cup 2026 Predictor
 
-🚀 **Live Demo:** [Streamlit App](YOUR_STREAMLIT_APP_LINK_HERE)
+🚀 **Live Demo:** [Streamlit App](https://bsn2810-fifa-world-cup-2026-predictor-app.streamlit.app/)
 
 📊 **Dataset:** [International Football Results Dataset](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017/code)
 
