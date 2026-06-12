@@ -29,7 +29,7 @@ The project combines a custom-built Elo rating system with a Logistic Regression
 
 **Model:** Multinomial Logistic Regression
 
-**Test Accuracy:** **60.16%**
+**Test Accuracy:** **61.21%**
 
 ### Classification Report
 
