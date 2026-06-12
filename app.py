@@ -131,7 +131,7 @@ if st.button("Predict Match"):
         st.progress(float(probs["home_win"]))
         st.subheader(f"**Draw:** {probs['draw']:.1%}")
         st.progress(float(probs["draw"]))
-        st.subheader(f"**{flags[away]}{away} Win:** {probs['away_win']:.1%}")
+        st.subheader(f"**{flags[away]} {away} Win:** {probs['away_win']:.1%}")
         st.progress(float(probs["away_win"]))
         st.divider()
 
