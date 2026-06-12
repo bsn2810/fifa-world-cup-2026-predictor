@@ -69,6 +69,21 @@ After every simulated match:
 
 This allows team strengths to evolve dynamically throughout the tournament.
 
+### Scoreline Generation
+
+Match outcomes are predicted using Logistic Regression, while scorelines are generated using Poisson distributions.
+
+Expected goals (λ) are estimated using the historical average goals in the dataset and adjusted using the Elo difference between the two teams:
+
+- λ_home = Avg Home Goals + (Elo Difference / 2000)
+- λ_away = Avg Away Goals - (Elo Difference / 2000)
+
+The scaling factor of **2000** was chosen empirically to keep expected goals within realistic football scoring ranges while still allowing stronger teams to receive a meaningful advantage.
+
+Goals are then sampled from independent Poisson distributions. Scorelines are repeatedly generated until they match the predicted outcome (Home Win, Draw, or Away Win).
+
+This approach produces realistic football scorelines while remaining consistent with the probabilities predicted by the machine learning model.
+
 ### Knockout Matches
 
 Since knockout matches cannot end in draws, the model's predicted draw probability is removed and the remaining win probabilities are renormalized.
